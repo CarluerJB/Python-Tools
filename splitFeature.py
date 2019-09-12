@@ -19,9 +19,8 @@ def get_Param_In_Command(nb_file):
 if(len(sys.argv)>=2):
     # get file to split in command line
     option = get_Param_In_Command(len(sys.argv))
-
 files=[]
-if "-f" or "-F" in option:
+if "-f" in option or "-F" in option:
     with open(sys.argv[len(option)+1]) as target:
         for line in target:
             files.append(line[:-1])
